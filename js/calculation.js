@@ -8,11 +8,26 @@ function handleClik(target){
 
     const ol = document.createElement("ol");
     ol.innerText = `${count + 1}.${itemName}`;
-
     selectedItem.appendChild(ol);
 
     const price = target.childNodes[3].childNodes[5].innerText.split(" ")[0];
-
     total = parseFloat(total) + parseFloat(price);
-    document.getElementById("total-price").innerText = total;
+    document.getElementById("total-price").innerText = total.toFixed(2);
+
+}
+
+function amountDiscount(){
+    if(document.getElementById("input-coupon").value === "SELL200")
+    {
+        const discount = (total*0.2).toFixed(2);
+        document.getElementById("discount-price").innerText = discount;
+    
+        const totalPrice = total - discount;
+        document.getElementById("total-pay").innerText = totalPrice.toFixed(2);
+   
+    }
+}
+
+function clearAllSopingData(){
+    location.reload(document.getElementById("clear-all-data"));
 }

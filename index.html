@@ -151,25 +151,25 @@
     
           </div>
         </div>
-        <div class="mt-10"><!--calculation section-->
+        <div id="clear-all-data" class="mt-10"><!--calculation section-->
           <div class="bg-[#F9F6E2] mt-5 p-5 w-80 h-32 rounded">
             <h3 class="font-semibold pt-2 pb-2">Have coupon?</h3>
-            <input class="p-1" type="text" placeholder="Coupon code">
-            <button class="bg-[#E527B2] text-white p-1">Apply</button>
+            <input id="input-coupon" class="p-1" type="text" placeholder="Coupon code">
+            <button onclick="amountDiscount()" class="bg-[#E527B2] text-white p-1">Apply</button>
           </div>
-          <div class="font-semibold bg-[#F9F6E2] mt-5 p-5 w-80 rounded">
+          <div class=" bg-[#F9F6E2] mt-5 p-5 w-80 rounded">
             <div>
-              <p>Sop items: </p>
+              <p class="font-semibold">Sop items: </p>
               <div class="select-item" id="select-item">
                 
               </div>
               
             </div>
             <div class="divider"></div> 
-            <div class="">
-              <p>Total price: <span id="total-price">00TK</span> </p>
-              <p>Discount: </p>
-              <p>Total: </p>
+            <div class="font-semibold">
+              <p>Total price: <span id="total-price">00</span>TK</p>
+              <p>Discount: <span id="discount-price">00</span>TK</p>
+              <p>Total: <span id="total-pay">00</span>TK </p>
             </div>
           </div>
           <!-- Open the modal using ID.showModal() method -->
@@ -181,7 +181,7 @@
               <p class="text-sm">Your Purchase the product</p>
               <div class="">
                 <!-- if there is a button in form, it will close the modal -->
-                <button class=" bg-[#E527B2] mt-5 p-1 text-white rounded">Go Home</button>
+                <button onclick="clearAllSopingData()" class=" bg-[#E527B2] mt-5 p-1 text-white rounded">Go Home</button>
               </div>
             </form>
           </dialog>
