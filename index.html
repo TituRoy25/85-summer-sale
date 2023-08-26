@@ -154,7 +154,7 @@
           <div class="bg-[#F9F6E2] mt-5 p-5 w-80 h-32 rounded">
             <h3 class="font-semibold pt-2 pb-2">Have coupon?</h3>
             <input id="input-coupon" class="p-1" type="text" placeholder="Coupon code">
-            <button onclick="amountDiscount()" class="bg-[#E527B2] text-white p-1">Apply</button>
+            <button  id="apply-button"  onclick="amountDiscount()" class=" bg-[#E527B2] text-white p-1" disabled >Apply</button>
           </div>
           <div class=" bg-[#F9F6E2] mt-5 p-5 w-80 rounded">
             <div>
@@ -171,7 +171,7 @@
             </div>
           </div>
           <!-- Open the modal using ID.showModal() method -->
-          <button class="bg-[#E527B2] w-80 h-10 text-white rounded" onclick="my_modal_1.showModal()">Make Purchase</button>
+          <button id="make-purchase"  class=" btn bg-[#E527B2] w-80 h-10 text-white rounded" disabled onclick="my_modal_1.showModal()">Make Purchase</button>
           <dialog id="my_modal_1" class="modal justify-center">
             <form method="dialog" class="modal-box justify-center">
               <img class="w-28 h-28" src="./images/congo.png" alt="">

@@ -14,6 +14,23 @@ function handleClik(target){
     total = parseFloat(total) + parseFloat(price);
     document.getElementById("total-price").innerText = total.toFixed(2);
 
+    if(total >= 200){
+        document.getElementById('apply-button').disabled = false;
+    }
+    else{
+        document.getElementById('apply-button').disabled = true;
+ 
+    }
+
+    if(total >= 1){
+        document.getElementById('make-purchase').disabled = false;
+    }
+    else{
+        document.getElementById('make-purchase').disabled = true;
+ 
+    }
+
+    
 }
 
 function amountDiscount(){
